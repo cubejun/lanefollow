@@ -9,7 +9,8 @@ gstreamer를 이용해 젯슨나노 보드에서 카메라 영상을 읽고, pc�
 
 로봇의 초기 위치는 항상 트랙 중심에 있고 영상의 중심에 있게 정의한다.
 
-![image](https://github.com/cubejun/lanefollow/assets/133946040/fb909ae0-9220-43e7-a3a7-59dc50d1e6ad)
+![image](https://github.com/cubejun/lanefollow/assets/133946040/81399cf1-e3b4-473e-a60c-ee85f0574bee)
+
 
 로봇이 트랙의 중앙에 위치하면 라인은 영상의 왼쪽과 오른쪽에 위치하게 된다. 라인검출을 위한 초기값을 영상의 왼쪽과 오른쪽의 임의의 좌표로 설정해둔다.
 
@@ -19,7 +20,8 @@ gstreamer를 이용해 젯슨나노 보드에서 카메라 영상을 읽고, pc�
 
 라인이 영상 밖으로 나가는 경우 최소값 알고리즘을 통해 검출되는 객체는 따라가던 라인이 아닌 잡음이나 다른 라인이 검출되는데, 이전 라인 무게중심과 현재 검출된 객체의 오차가 특정 값 이상이 되면 이전 라인 무게중심을 현재 라인의 무게중심으로 업데이트 되도록 만들었다.
 
-![image](https://github.com/cubejun/lanefollow/assets/133946040/a8bc4cad-3b68-4a50-883f-1b7cc45f195d)
+![image](https://github.com/cubejun/lanefollow/assets/133946040/a088b4cd-d903-495c-a6b2-42ac120cdb92)
+
 
 
 이렇게 검출된 라인의 무게중심을 영상의 중심좌표(로봇의 중심)에 빼는 것으로 라인이 로봇 정면에서 벗어난 정도(error)를 계산했다.
